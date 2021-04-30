@@ -42,6 +42,7 @@ def predict():
             Transmission_Mannual=1
         else:
             Transmission_Mannual=0
+
         prediction=model.predict([[Present_Price,Kms_Driven,Owner,Year,Fuel_Type_Diesel,Fuel_Type_Petrol,Seller_Type_Individual,Transmission_Mannual]])
         output=round(prediction[0],2)
         if output<0:
